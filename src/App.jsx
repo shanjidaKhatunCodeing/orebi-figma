@@ -12,7 +12,7 @@ import Information from "./components/layouts/Information"
 import Navbar from "./components/layouts/Navbar"
 import NewArrivals from "./components/layouts/NewArrivals"
 import OurBestsellers from "./components/layouts/OurBestsellers"
-import SingUp from "./components/layouts/singUp"
+
 
 
   
@@ -29,7 +29,6 @@ function App() {
       <OurBestsellers/>
       <Ads/>
       <Fotter/>
-      <SingUp/>
       
     </>
   )

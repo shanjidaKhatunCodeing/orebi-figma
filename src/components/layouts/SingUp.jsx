@@ -7,6 +7,8 @@ import InputFiled from '../InputFiled'
 import axios from 'axios'
 import { useState } from 'react'
 import { useEffect } from "react"
+import Navbar from './Navbar'
+import Category from './Category'
 
 
 
@@ -24,6 +26,8 @@ const SingUp = () => {
   },[])
   return (
     <section className='py[120px]'>
+        <Navbar/>
+        <Category/>
         <Container>
             <Heading style='pb-[50px]' text='Sing up' as='h2'/>
             <Heading style='pb-[40px]' text='New Customer' as='h2'/>

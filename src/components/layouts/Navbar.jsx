@@ -16,11 +16,11 @@ const Navbar = () => {
                 <div className="w-[90%]">
                     <ul>
                         <Flex style="justify-center gap-x-5">
-                            <List text="Home" href="#"/>
-                            <List text="Shop" href="#"/>
-                            <List text="About" href="#"/>
-                            <List text="Contacts" href="#"/>
-                            <List text="Journal" href="#"/>
+                            <List text="Home" href="/"/>
+                            <List text="Shop" href="/shop"/>
+                            <List text="About" href="/about"/>
+                            <List text="Contacts" href="/contact"/>
+                            <List text="Journal" href="/journal"/>
                         </Flex>
                     </ul>
                 </div>
