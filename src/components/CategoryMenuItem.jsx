@@ -1,14 +1,15 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const CategoryMenuItem = ({href, className, text}) => {
+const CategoryMenuItem = ({to, className, text}) => {
   return (
     <>
-    <a href={href}>
+    <Link to={to}>
         <li className={`text-sm font-dm text-white py-[16px] px-[20px] ${className}`}>{text}
         <div className='border-b border-slate-100 py-[3px]'></div>
         </li>
         
-    </a>
+    </Link>
     
     </>
   )

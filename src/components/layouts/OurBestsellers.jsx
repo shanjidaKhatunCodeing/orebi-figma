@@ -10,7 +10,7 @@ import pro4 from '../../assets/product8.png'
 
 const OurBestsellers = () => {
   return (
-    <section className='py-[80px]'>
+    <section className='py-[50px]'>
         <Container>
             <Heading style='pb-20 text-[39px]' text='Our Bestsellers' as='h2'/>
             <Flex style='justify-between gap-x-10'>

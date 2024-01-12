@@ -11,7 +11,7 @@ const Product = ({src, alt, text, pricetext}) => {
   return (
     <div className='relative group'>
         <img className='w-[100%]' src={src} alt={alt} />
-        <Badge/>
+        <Badge className='absolute top-4 left-5' text='New'/>
         <Flex style='justify-between'>
             <p className='text-xl text-dm font-bold'>{text}</p>
             <p className='text-dm text-sm text-textColor font-regular'>{pricetext}</p>

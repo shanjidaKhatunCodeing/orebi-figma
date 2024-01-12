@@ -10,7 +10,7 @@ import prduct4 from '../../assets/product4.png'
 
 const NewArrivals = () => {
   return (
-   <section className='py-[80px]'>
+   <section className='py-[50px]'>
     <Container>
         <Heading style='pb-20 text-[39px]' text='New Arrivals' as='h2'/>
 

@@ -63,21 +63,21 @@ const Category = () => {
             </Flex>
             <div className='w-[250px] bg-black hidden absolute top-[170px] left-[70px]' ref={dropRef}>
                     <ul>
-                        <CategoryMenuItem href='#' text='Accesories'/>
-                        <CategoryMenuItem href='#' text='Furniture'/>
-                        <CategoryMenuItem href='#' text='Electronics'/>
-                        <CategoryMenuItem href='#' text='Clothes'/>
-                        <CategoryMenuItem href='#' text='Bags'/>
-                        <CategoryMenuItem href='#' text='Home appliances'/>
+                        <CategoryMenuItem to='#' text='Accesories'/>
+                        <CategoryMenuItem to='#' text='Furniture'/>
+                        <CategoryMenuItem to='#' text='Electronics'/>
+                        <CategoryMenuItem to='#' text='Clothes'/>
+                        <CategoryMenuItem to='#' text='Bags'/>
+                        <CategoryMenuItem to='#' text='Home appliances'/>
                     </ul>
                 </div>
 
                 <div className='w-[150px] bg-white rounded-md  absolute top-[160px] right-[100px] hidden' ref={logRef}>
                     <div className='hover:bg-black hover:text-white'>
-                        <Button className='w-full block  py-[17px]' href='/singup' text='Sing Up'/>
+                        <Button className='w-full block  py-[17px]' to='/singup' text='Sing Up'/>
                     </div>
                     <div className='hover:bg-black hover:text-white'>
-                        <Button className='w-full block  py-[17px]' href='singin' text='Sing In'/>
+                        <Button className='w-full block  py-[17px]' to='singin' text='Sing In'/>
                     </div>
                 </div>
         </Container>
