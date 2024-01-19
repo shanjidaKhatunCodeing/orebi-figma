@@ -1,10 +1,16 @@
 import React from 'react'
+import Heading from '../Heading'
+import Breadcrumb from '../Breadcrumb'
 
 const SingIn = () => {
+
+  let bread = window.location.pathname.replace("/", "")
+  
+
   return (
    <>
-   <div className='text-3xl text-lime-700'>This is Sing In page</div>
-
+   <Heading style='text-[49px]' text='Singin' as='h2'/>
+   <Breadcrumb text={bread}/>
    </>
   )
 }

@@ -1,12 +1,17 @@
 import React from 'react'
 import Label from '../Label'
 import InputFiled from '../InputFiled'
-import Navbar from './Navbar'
+import Heading from '../Heading'
+import Breadcrumb from '../Breadcrumb'
+
 
 const Contact = () => {
+
+  let bread = window.location.pathname.replace("/", "")
   return (
   <>
-    <div className='text-3xl text-amber-950'>This is contact page</div>
+   <Heading style='text-[49px]' text='Contact' as='h2'/>
+   <Breadcrumb text={bread}/>
    <Label labelName='name'/>
    <InputFiled inType='email' inPh='Enter your Email'/>
   </>

@@ -7,6 +7,7 @@ import InputFiled from '../InputFiled'
 import axios from 'axios'
 import { useState } from 'react'
 import { useEffect } from "react"
+import Breadcrumb from '../Breadcrumb'
 
 
 
@@ -15,6 +16,8 @@ const SingUp = () => {
 
 
     let [all, setAll] = useState([])
+   
+   let bread = window.location.pathname.replace("/", "").replace("-", " ")
 
   useEffect(()=>{
     async function all(){
@@ -26,7 +29,8 @@ const SingUp = () => {
   return (
     <section className='py[120px]'>
         <Container>
-            <Heading style='pb-[50px]' text='Sing up' as='h2'/>
+            <Heading text='Sing up' as='h2'/>
+             <Breadcrumb text={bread}/> 
             <Heading style='pb-[40px]' text='New Customer' as='h2'/>
             <Flex className='justify-between gap-x-10'>
                 <div className='w-[50%] pb-[40px]'>

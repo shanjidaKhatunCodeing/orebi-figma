@@ -15,10 +15,10 @@ import Shop from './components/layouts/Shop.jsx';
 import About from './components/layouts/About.jsx';
 import Contact from './components/layouts/Contact.jsx';
 import Journal from './components/layouts/Journal.jsx';
-import SingUp from './components/layouts/singUp.jsx';
 import SingIn from './components/layouts/SingIn.jsx';
 import RootLayout from './components/RootLayout.jsx';
 import Error from './components/layouts/Error.jsx';
+import SingUp from './components/layouts/SingUp.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -29,8 +29,8 @@ const router = createBrowserRouter(
           <Route path='/about' element={<About />}/>
           <Route path='/contact' element={<Contact />}/>
           <Route path='/journal' element={<Journal />}/>
-          <Route path='/singUp' element={<SingUp />}/>
-          <Route path='/singIn' element={<SingIn />}/>
+          <Route path='/sing-up' element={<SingUp/>}/>
+          <Route path='/singin' element={<SingIn />}/>
           <Route path='/:id' element={<Error/>}/>
       </Route>
     </Route>

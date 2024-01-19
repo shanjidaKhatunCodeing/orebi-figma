@@ -74,7 +74,7 @@ const Category = () => {
 
                 <div className='w-[150px] bg-white rounded-md  absolute top-[160px] right-[100px] hidden' ref={logRef}>
                     <div className='hover:bg-black hover:text-white'>
-                        <Button className='w-full block  py-[17px]' to='/singup' text='Sing Up'/>
+                        <Button className='w-full block  py-[17px]' to='/sing-up' text='Sing Up'/>
                     </div>
                     <div className='hover:bg-black hover:text-white'>
                         <Button className='w-full block  py-[17px]' to='singin' text='Sing In'/>

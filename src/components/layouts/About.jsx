@@ -7,12 +7,16 @@ import about from '../../assets/about.png'
 import Flex from '../Flex'
 import Badge from '../Badge'
 import Paragraph from '../Paragraph'
+import Breadcrumb from '../Breadcrumb'
 const About = () => {
+  let bread = window.location.pathname.replace("/", "")
+  
   return (
     <>
     <section className='py-[80px]'>
       <Container>
           <Heading style='text-[49px]' text='About' as='h2'/>
+          <Breadcrumb text={bread}/>
           <div className='py-[100px]'>
             <Flex style='justify-between'>
             <div className='w-[45%] relative'>
