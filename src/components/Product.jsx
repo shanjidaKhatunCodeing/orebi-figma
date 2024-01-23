@@ -5,13 +5,17 @@ import Price from './Price'
 import Paragraph from './Paragraph'
 import { FaHeart, FaShoppingCart } from "react-icons/fa";
 import Compareicon from './Compareicon'
+import { useDispatch } from 'react-redux'
+import { increment } from '../slices/counterSlice'
 
 
-const Product = ({src, alt, text, pricetext}) => {
+const Product = ({src, alt, text, pricetext, badgeText}) => {
+
+    const dispatch = useDispatch()
   return (
     <div className='relative group'>
         <img className='w-[100%]' src={src} alt={alt} />
-        <Badge className='absolute top-4 left-5' text='New'/>
+        <Badge className='absolute top-4 left-5' text={badgeText}/>
         <Flex style='justify-between'>
             <p className='text-xl text-dm font-bold'>{text}</p>
             <p className='text-dm text-sm text-textColor font-regular'>{pricetext}</p>
@@ -29,11 +33,13 @@ const Product = ({src, alt, text, pricetext}) => {
                 <Compareicon/>
             </Flex>
             </div>
-            <div className='pb-16'>
-            <Flex style=' justify-end gap-x-5'>
-                <Paragraph style='text-base text-black font-bold' text='Add to Cart'/>
-                <FaShoppingCart/>
-            </Flex>
+            <div className='pb-16 text-end'>
+                <button onClick={()=> dispatch(increment())}>
+                    <Flex style=' justify-end gap-x-5'>
+                        <Paragraph style='text-base text-black font-bold' text='Add to Cart'/>
+                        <FaShoppingCart/>
+                    </Flex>
+                </button>
             </div>
             
         </div>

@@ -7,10 +7,16 @@ import { FaUser, FaCaretDown, FaShoppingCart, FaSearch } from "react-icons/fa";
 import CategoryMenuItem from '../CategoryMenuItem'
 import { useRef } from 'react'
 import Button from '../Button'
-
+import { useSelector } from 'react-redux'
 const Category = () => {
     let dropRef = useRef(null)
     let logRef = useRef(null)
+
+    const data = useSelector((state)=>{
+        return(
+            state.counter.value
+        )
+    })
 
     let handleBtn = ()=>{
         // console.log(dropRef);
@@ -57,7 +63,10 @@ const Category = () => {
                         <FaUser/>
                         <FaCaretDown/>
                         </button>
-                        <FaShoppingCart className="ml-5"/>
+                        <div className='relative'>
+                            <FaShoppingCart className="ml-5"/>
+                            <Paragraph style='font-bold text-[15px] px-[10px] absolute top-[-15px] left-[25px]' text={data}/>
+                        </div>
                     </Flex>
                 </div>
             </Flex>
