@@ -8,6 +8,13 @@ import CategoryMenuItem from '../CategoryMenuItem'
 import { useRef } from 'react'
 import Button from '../Button'
 import { useSelector } from 'react-redux'
+import Image from '../Image'
+import img from '../../assets/img.png'
+import Heading from '../Heading'
+import { ImCross } from "react-icons/im"
+import { Link } from 'react-router-dom'
+
+
 const Category = () => {
     let dropRef = useRef(null)
     let logRef = useRef(null)
@@ -29,6 +36,7 @@ const Category = () => {
             dropRef.current.style.display="block"
         }
     }
+    
 
     let handleIcon = () =>{
         if(logRef.current.style.display =="block"){
@@ -39,6 +47,20 @@ const Category = () => {
             logRef.current.style.display="block"
         }
     }
+
+    let cartRef = useRef(null)
+    let cartHandleBtn = ()=>{
+        // console.log(dropRef);
+
+        if(cartRef.current.style.display =="block"){
+            cartRef.current.style.display="none"
+        }
+
+        else{
+            cartRef.current.style.display="block"
+        }
+    }
+
   return (
     <section className="py-6 bg-gray-100 border-y-2 border-categoryBoderColor">
         <Container className='relative'>
@@ -51,7 +73,7 @@ const Category = () => {
                         <Paragraph style="text-sm text-headingColor" text="Shop by Category"/>
                     </Flex>
                 </div>
-                <div className="w-1/2 ml-[150px]">
+                <div className="w-1/2">
                    <Flex style="items-center justify-center">
                    <input className="w-[600px] py-4 px-5 outline-none placeholder:text-dm placeholder:text-sm placeholder:font-regular placeholder:text-placeholderColor" type="text" placeholder="Search Products"/>
                     <FaSearch className="ml-[-30px]"/>
@@ -64,8 +86,10 @@ const Category = () => {
                         <FaCaretDown/>
                         </button>
                         <div className='relative'>
-                            <FaShoppingCart className="ml-5"/>
-                            <Paragraph style='font-bold text-[15px] px-[10px] absolute top-[-15px] left-[25px]' text={data}/>
+                           <Link>
+                            <FaShoppingCart className="ml-5" onClick={cartHandleBtn}/>
+                                <Paragraph style='font-bold text-[15px] px-[10px] absolute top-[-15px] left-[25px]' text={data}/>
+                           </Link>
                         </div>
                     </Flex>
                 </div>
@@ -87,6 +111,29 @@ const Category = () => {
                     </div>
                     <div className='hover:bg-black hover:text-white'>
                         <Button className='w-full block  py-[17px]' to='singin' text='Sing In'/>
+                    </div>
+                </div>
+
+                <div className='w-[300px] border-2 border-[#F0F0F0] absolute left-[1000px] hidden' ref={cartRef}>
+                    <Flex className='bg-[#F5F5F3]'>
+                       <Image style='p-5' src={img}/>
+                       <div className='py-5'>
+                       <Flex style='items-center gap-x-5'>
+                        <div>
+                            <Heading text='Balck Smart Watch' as='h2'/>
+                            <Heading style='pt-2' text='$44.00' as='h2'/>
+                        </div>
+                        <ImCross className='font-bold'/>
+                        </Flex>
+                       </div>
+                    </Flex>
+
+                    <div className='p-5 bg-white'>
+                        <Heading style='text-[#767676] text-[16px] pb-[10px]' text='Subtotal: #$44.00#' as='h2'/>
+                        <Flex style='gap-x-5'>
+                            <Button className='px-[19px] border-2 border-black rounded-sm hover:bg-black hover:text-white' text='View Cart'/>
+                            <Button className='px-[19px] border-2 border-black rounded-sm hover:bg-black hover:text-white' text='Checkout'/>
+                        </Flex>
                     </div>
                 </div>
         </Container>

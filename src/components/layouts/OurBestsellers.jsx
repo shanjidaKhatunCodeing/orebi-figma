@@ -15,16 +15,16 @@ const OurBestsellers = () => {
             <Heading style='pb-20 text-[39px]' text='Our Bestsellers' as='h2'/>
             <Flex style='justify-between gap-x-10'>
                 <div className='w-1/4'>
-                    <Product src={pro} text='Basic Crew Neck Tee' pricetext='$44.00'/>
+                    <Product src={pro} text='Basic Crew Neck Tee' pricetext='$44.00' badgeText='New'/>
                 </div>
                 <div className='w-1/4'>
-                    <Product src={pro2} text='Basic Crew Neck Tee' pricetext='$44.00'/>
+                    <Product src={pro2} text='Basic Crew Neck Tee' pricetext='$44.00' badgeText='New'/>
                 </div>
                 <div className='w-1/4'>
-                    <Product src={pro3} text='Basic Crew Neck Tee' pricetext='$44.00'/>
+                    <Product src={pro3} text='Basic Crew Neck Tee' pricetext='$44.00' badgeText='New'/>
                 </div>
                 <div className='w-1/4'>
-                    <Product src={pro4} text='Basic Crew Neck Tee' pricetext='$44.00'/>
+                    <Product src={pro4} text='Basic Crew Neck Tee' pricetext='$44.00' badgeText='New'/>
                 </div>
             </Flex>
         </Container>

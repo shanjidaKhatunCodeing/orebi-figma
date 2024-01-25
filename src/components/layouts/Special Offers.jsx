@@ -16,19 +16,19 @@ const SpecialOffers = () => {
 
         <Flex style='justify-between gap-x-10'>
             <div className='w-1/4'>
-                <Product src={prduct9} text='Basic Crew Neck Tee' pricetext='$44.00'/>
+                <Product src={prduct9} text='Basic Crew Neck Tee' pricetext='$44.00' badgeText='New'/>
             </div>
             
             <div className='w-1/4 pb-20'>
-                <Product src={prduct10} text='Basic Crew Neck Tee' pricetext='$44.00'/>
+                <Product src={prduct10} text='Basic Crew Neck Tee' pricetext='$44.00' badgeText='New'/>
             </div>
             
             <div className='w-1/4 pb-20'>
-                <Product src={prduct11} text='Basic Crew Neck Tee' pricetext='$44.00'/>
+                <Product src={prduct11} text='Basic Crew Neck Tee' pricetext='$44.00' badgeText='New'/>
             </div>
            
             <div className='w-1/4 pb-20'>
-                <Product src={prduct12} text='Basic Crew Neck Tee' pricetext='$44.00'/>
+                <Product src={prduct12} text='Basic Crew Neck Tee' pricetext='$44.00' badgeText='New'/>
             </div>
         </Flex>
     </Container>

@@ -21,7 +21,6 @@ import Error from './components/layouts/Error.jsx';
 import SingUp from './components/layouts/SingUp.jsx';
 import store from './components/store.js'
 import { Provider } from 'react-redux'
-import Products from './components/layouts/Products.jsx';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
@@ -31,7 +30,6 @@ const router = createBrowserRouter(
           <Route path='/about' element={<About />}/>
           <Route path='/contact' element={<Contact />}/>
           <Route path='/journal' element={<Journal />}/>
-          <Route path='/product' element={<Products/>}/>
           <Route path='/sing-up' element={<SingUp/>}/>
           <Route path='/singin' element={<SingIn />}/>
           <Route path='/:id' element={<Error/>}/>

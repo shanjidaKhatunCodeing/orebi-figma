@@ -16,19 +16,19 @@ const NewArrivals = () => {
 
         <Flex style='justify-between gap-x-10'>
             <div className='w-1/4'>
-                <Product src={prduct1} text='Basic Crew Neck Tee' pricetext='$44.00'/>
+                <Product src={prduct1} text='Basic Crew Neck Tee' pricetext='$44.00' badgeText='New'/>
             </div>
             
             <div className='w-1/4 pb-20'>
-                <Product src={prduct2} text='Basic Crew Neck Tee' pricetext='$44.00'/>
+                <Product src={prduct2} text='Basic Crew Neck Tee' pricetext='$44.00' badgeText='New'/>
             </div>
             
             <div className='w-1/4 pb-20'>
-                <Product src={prduct3} text='Basic Crew Neck Tee' pricetext='$44.00'/>
+                <Product src={prduct3} text='Basic Crew Neck Tee' pricetext='$44.00' badgeText='New'/>
             </div>
            
             <div className='w-1/4 pb-20'>
-                <Product src={prduct4} text='Basic Crew Neck Tee' pricetext='$44.00'/>
+                <Product src={prduct4} text='Basic Crew Neck Tee' pricetext='$44.00' badgeText='New'/>
             </div>
         </Flex>
     </Container>
